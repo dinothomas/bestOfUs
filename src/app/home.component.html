@@ -1,0 +1,43 @@
+<div class="main-div">
+    <table *ngIf="id == 'admin'">
+      <tr>
+        <td>Orange</td>
+        <td><input type="text" [(ngModel)]="orange" (focusout)="focusOutFunction('orange')"/></td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td><input type="text" [(ngModel)]="apple" (focusout)="focusOutFunction('apple')"/></td>
+      </tr>
+      <tr>
+        <td>Grape</td>
+        <td><input type="text" [(ngModel)]="grape" (focusout)="focusOutFunction('grape')"/></td>
+      </tr>
+    </table>
+
+    <div>
+        <table *ngIf="id == 'orange'">
+            <tr>
+                <td class="amount">${{ orange }}</td>
+            </tr>
+            <tr>
+                <td class="product">Orange</td>
+            </tr>
+        </table>
+        <table *ngIf="id == 'apple'">
+            <tr>
+                <td class="amount">${{ apple }}</td>
+            </tr>
+            <tr>
+                <td class="product">Apple</td>
+            </tr>
+        </table>
+        <table *ngIf="id == 'grape'">
+            <tr>
+                <td class="amount">${{ grape }}</td>
+            </tr>
+            <tr>
+                <td class="product">Grape</td>
+            </tr>
+        </table>
+    </div>
+  </div>
